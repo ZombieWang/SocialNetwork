@@ -13,6 +13,7 @@
 		013C8ED91E6882C3009E00AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 013C8ED81E6882C3009E00AE /* Assets.xcassets */; };
 		013C8EDC1E6882C3009E00AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 013C8EDA1E6882C3009E00AE /* LaunchScreen.storyboard */; };
 		014129E61E7E5AAE00998277 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014129E51E7E5AAE00998277 /* FeedVC.swift */; };
+		016E55F51E9D651C0005746B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E55F41E9D651C0005746B /* DataService.swift */; };
 		0171B6461E9568B90083A1FC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0171B6451E9568B90083A1FC /* CircleView.swift */; };
 		01A620E51E6A53EA00EBBD63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01A620E41E6A53EA00EBBD63 /* GoogleService-Info.plist */; };
 		01A620E91E6AABC100EBBD63 /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A620E81E6AABC100EBBD63 /* FancyView.swift */; };
@@ -33,6 +34,7 @@
 		013C8EDB1E6882C3009E00AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		013C8EDD1E6882C3009E00AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		014129E51E7E5AAE00998277 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		016E55F41E9D651C0005746B /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0171B6451E9568B90083A1FC /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		018979CE1E7C49D400E261D3 /* SocialNetwork.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialNetwork.entitlements; sourceTree = "<group>"; };
 		01A620E41E6A53EA00EBBD63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		013C8ED01E6882C3009E00AE /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				018979CE1E7C49D400E261D3 /* SocialNetwork.entitlements */,
+				016E55F31E9D64F40005746B /* Services */,
 				01E1B1781E6886DE00EE04D7 /* Model */,
 				01E1B1771E6886DA00EE04D7 /* View */,
 				01E1B1761E6886D100EE04D7 /* Controller */,
@@ -90,12 +92,21 @@
 			path = SocialNetwork;
 			sourceTree = "<group>";
 		};
+		016E55F31E9D64F40005746B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				016E55F41E9D651C0005746B /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		01A620E61E6A53F300EBBD63 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				013C8ED81E6882C3009E00AE /* Assets.xcassets */,
 				01A620E41E6A53EA00EBBD63 /* GoogleService-Info.plist */,
 				013C8EDD1E6882C3009E00AE /* Info.plist */,
+				018979CE1E7C49D400E261D3 /* SocialNetwork.entitlements */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -262,7 +273,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D4D030D911CDEDDF88645F32 /* [CP] Embed Pods Frameworks */ = {
@@ -292,6 +303,7 @@
 				013C8ED41E6882C3009E00AE /* SignInVC.swift in Sources */,
 				01A620ED1E6AB9BE00EBBD63 /* RoundButton.swift in Sources */,
 				013C8ED21E6882C3009E00AE /* AppDelegate.swift in Sources */,
+				016E55F51E9D651C0005746B /* DataService.swift in Sources */,
 				014129E61E7E5AAE00998277 /* FeedVC.swift in Sources */,
 				01A620E91E6AABC100EBBD63 /* FancyView.swift in Sources */,
 				01A620EB1E6AAC4D00EBBD63 /* Constants.swift in Sources */,
