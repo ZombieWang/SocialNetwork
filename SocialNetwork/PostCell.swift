@@ -32,9 +32,9 @@ class PostCell: UITableViewCell {
             self.postImg.image = img
         } else {
             let ref = FIRStorage.storage().reference(forURL: post.imageUrl)
-            ref.data(withMaxSize: 2 * 1024 * 1024, completion: { (data, error) in
+            ref.data(withMaxSize: 5 * 1024 * 1024, completion: { (data, error) in
                 if error != nil {
-                    print("Unable to download image from Forebase storage")
+                    print("Unable to download image from Forebase storage - \(error.debugDescription)")
                 } else {
                     print("Image downloaded from Firebase storage")
                     if let imgData = data {
