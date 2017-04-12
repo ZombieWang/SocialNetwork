@@ -159,6 +159,9 @@
                                             <constraint firstAttribute="width" constant="45" id="Anc-wU-fo1"/>
                                             <constraint firstAttribute="height" constant="38" id="tem-8M-VdR"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="rpt-AS-FoO" appends="YES" id="elr-yg-NBq"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedbook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHY-Ul-nfE">
                                         <rect key="frame" x="128" y="21" width="119" height="36"/>
@@ -176,9 +179,6 @@
                                     <constraint firstItem="jHY-Ul-nfE" firstAttribute="centerX" secondItem="iI1-FX-r4u" secondAttribute="centerX" id="nml-G2-gRJ"/>
                                     <constraint firstItem="Sbn-zv-7sf" firstAttribute="leading" secondItem="iI1-FX-r4u" secondAttribute="leading" constant="16" id="pHd-nT-qBP"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="rpt-AS-FoO" appends="YES" id="DPz-MI-XsZ"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mS-OO-21S" customClass="FancyView" customModule="SocialNetwork" customModuleProvider="target">
                                 <rect key="frame" x="16" y="81" width="343" height="65"/>
